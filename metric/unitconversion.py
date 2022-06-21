@@ -48,32 +48,18 @@ class UnitType:
         return self.getStringFromMultiple(value, sortedMultiples[-1])
 
 
-DISTANCE = UnitType().addMultiple("m", 1).addMultiple("km", 10 ** 3).addMultiple("cm", 10 ** -2).addMultiple("mm",
-                                                                                                             10 ** -3).addMultiple(
-    "µm", 10 ** -6).addMultiple("nm", 10 ** -9).addMultiple("pm", 10 ** -12)
-AREA = UnitType().addMultiple("m²", 1).addMultiple("km²", 10 ** 6).addMultiple("cm²", 10 ** -4).addMultiple("mm²",
-                                                                                                            10 ** -6)
-VOLUME = UnitType().addMultiple("L", 1).addMultiple("mL", 10 ** -3).addMultiple("µL", 10 ** -6).addMultiple("nL",
-                                                                                                            10 ** -9).addMultiple(
-    "pL", 10 ** -12)
-ENERGY = UnitType().addMultiple("J", 1).addMultiple("TJ", 10 ** 12).addMultiple("GJ", 10 ** 9).addMultiple("MJ",
-                                                                                                           10 ** 6).addMultiple(
-    "kJ", 10 ** 3).addMultiple("mJ", 10 ** -3).addMultiple("µJ", 10 ** -6).addMultiple("nJ", 10 ** -9)
-FORCE = UnitType().addMultiple("N", 1).addMultiple("MN", 10 ** 6).addMultiple("kN", 10 ** 3).addMultiple("mN",
-                                                                                                         10 ** -3).addMultiple(
-    "µN", 10 ** -6).addMultiple("nN", 10 ** -9).addMultiple("pN", 10 ** -12)
+DISTANCE = UnitType().addMultiple("m", 1).addMultiple("km", 10 ** 3).addMultiple("cm", 10 ** -2).addMultiple("mm", 10 ** -3).addMultiple("µm", 10 ** -6).addMultiple("nm", 10 ** -9).addMultiple("pm", 10 ** -12)
+AREA = UnitType().addMultiple("m²", 1).addMultiple("km²", 10 ** 6).addMultiple("cm²", 10 ** -4).addMultiple("mm²", 10 ** -6)
+VOLUME = UnitType().addMultiple("L", 1).addMultiple("mL", 10 ** -3).addMultiple("µL", 10 ** -6).addMultiple("nL", 10 ** -9).addMultiple("pL", 10 ** -12)
+ENERGY = UnitType().addMultiple("J", 1).addMultiple("TJ", 10 ** 12).addMultiple("GJ", 10 ** 9).addMultiple("MJ", 10 ** 6).addMultiple("kJ", 10 ** 3).addMultiple("mJ", 10 ** -3).addMultiple("µJ", 10 ** -6).addMultiple("nJ", 10 ** -9)
+FORCE = UnitType().addMultiple("N", 1).addMultiple("MN", 10 ** 6).addMultiple("kN", 10 ** 3).addMultiple("mN", 10 ** -3).addMultiple("µN", 10 ** -6).addMultiple("nN", 10 ** -9).addMultiple("pN", 10 ** -12)
 TORQUE = UnitType().addMultiple("N*m", 1)
-VELOCITY = UnitType().addMultiple("m/s", 1).addMultiple("km/s", 10 ** 3)
-MASS = UnitType().addMultiple("g", 1).addMultiple("kg", 10 ** 3).addMultiple("mg", 10 ** -3).addMultiple("µg",
-                                                                                                         10 ** -6).addMultiple(
-    "ng", 10 ** -9).addMultiple("pg", 10 ** -12)
+VELOCITY = UnitType().addMultiple("m/s", 1).addMultiple("km/s", 10 ** 3)#.addMultiple("km/h", 3.6)
+MASS = UnitType().addMultiple("g", 1).addMultiple("kg", 10 ** 3).addMultiple("mg", 10 ** -3).addMultiple("µg", 10 ** -6).addMultiple("ng", 10 ** -9).addMultiple("pg", 10 ** -12)
 TEMPERATURE = UnitType().addMultiple("°C", 1)
 PRESSURE = UnitType().addMultiple("atm", 1)
 LUMINOUSINTENSITY = UnitType().addMultiple("cd", 1)
-POWER = UnitType().addMultiple("W", 1).addMultiple("pW", 10 ** -12).addMultiple("nW", 10 ** -9).addMultiple("µW",
-                                                                                                            10 ** -6).addMultiple(
-    "mW", 10 ** -3).addMultiple("kW", 10 ** 3).addMultiple("MW", 10 ** 6).addMultiple("GW", 10 ** 9).addMultiple("TW",
-                                                                                                                 10 ** 12)
+POWER = UnitType().addMultiple("W", 1).addMultiple("pW", 10 ** -12).addMultiple("nW", 10 ** -9).addMultiple("µW", 10 ** -6).addMultiple("mW", 10 ** -3).addMultiple("kW", 10 ** 3).addMultiple("MW", 10 ** 6).addMultiple("GW", 10 ** 9).addMultiple("TW", 10 ** 12)
 
 
 class Unit:
@@ -236,7 +222,7 @@ units.append(NormalUnit("dram", "drams?", MASS, 1.7718451953125))  # drams
 units.append(NormalUnit("hundredweight", "hundredweights?|cwt", MASS, 50802))  # hundredweights
 
 # Distance
-units.append(NormalUnit("inch", "inch(es)?|\"|''|in", DISTANCE, 0.0254))  # inch
+units.append(NormalUnit("inch", "inch(es)?|\"|''", DISTANCE, 0.0254))  # inch
 units.append(NormalUnit("foot", "f(oo|ee)?t", DISTANCE, 0.3048))  # foot
 units.append(NormalUnit("mile", "mi(les?)?", DISTANCE, 1609.344))  # mile
 units.append(NormalUnit("yard", "yd|yards?", DISTANCE, 0.9144))  # yard

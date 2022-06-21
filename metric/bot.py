@@ -14,5 +14,5 @@ class MetricPlugin(Plugin):
         message = evt.content.body
         converted_message = process(message)
 
-        if message != converted_message:
+        if type(converted_message) is str: ## if message doesnt get converter it is None Type object
             await evt.reply(content=TextMessageEventContent(msgtype=MessageType.TEXT, body=converted_message))
