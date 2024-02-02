@@ -200,10 +200,8 @@ units.append(NormalUnit("knot", "knots?|kts?", VELOCITY, 0.51444444444))  # knot
 units.append(NormalUnit("feet per second", "f(oo|ee)?t ?(per|/|p) ?s(ec|onds?)?", VELOCITY, 0.3048))  # feet per second
 
 # Temperature
-units.append(NormalUnit("degrees fahrenheit", "((°|º|deg(ree)?s?) ?)?(fahrenheit|freedom|f)", TEMPERATURE, 5 / 9,
-                        -32))  # Degrees freedom
-units.append(NormalUnit("degrees rankine", "((°|º|deg(ree)?s?) ?)?(ra?(nkine)?)", TEMPERATURE, 5 / 9,
-                        -491.67))  # Degrees rankine
+units.append(NormalUnit("degrees fahrenheit", "((°|º|deg(ree)?s?) ?)?(fahrenheit|freedom|f)", TEMPERATURE, 5 / 9, -32))  # Degrees freedom
+#units.append(NormalUnit("degrees rankine", "((°|º|deg(ree)?s?) ?)?(ra?(nkine)?)", TEMPERATURE, 5 / 9, -491.67))  # Degrees rankine
 
 # Pressure
 units.append(NormalUnit("pound per square inch", "pounds?((-| )?force)? per square in(ch)?|lbf\/in\^2|psi", PRESSURE,
@@ -222,7 +220,7 @@ units.append(NormalUnit("dram", "drams?", MASS, 1.7718451953125))  # drams
 units.append(NormalUnit("hundredweight", "hundredweights?|cwt", MASS, 50802))  # hundredweights
 
 # Distance
-units.append(NormalUnit("inch", "inch(es)?|\"|''", DISTANCE, 0.0254))  # inch
+units.append(NormalUnit("inch", "inch(es)?", DISTANCE, 0.0254))  # inch
 units.append(NormalUnit("foot", "f(oo|ee)?t", DISTANCE, 0.3048))  # foot
 units.append(NormalUnit("mile", "mi(les?)?", DISTANCE, 1609.344))  # mile
 units.append(NormalUnit("yard", "yd|yards?", DISTANCE, 0.9144))  # yard

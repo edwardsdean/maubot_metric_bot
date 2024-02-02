@@ -8,7 +8,7 @@ class MetricPlugin(Plugin):
     @classmethod
     @event.on(EventType.ROOM_MESSAGE)
     async def on_imperial_message(self, evt: MessageEvent) -> None:
-        if evt.content.msgtype != MessageType.TEXT or evt.content.body.startswith("!"):
+        if evt.content.msgtype != MessageType.TEXT or evt.content.body.startswith("!") or evt.content.body.startswith("."):
             return
 
         message = evt.content.body
