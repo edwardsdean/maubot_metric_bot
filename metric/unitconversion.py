@@ -174,8 +174,8 @@ units.append(NormalUnit("pint", "pints?|pt", VOLUME, 0.473176))  # pint
 units.append(NormalUnit("quart", "quarts?|qt", VOLUME, 0.946353))  # quart
 units.append(NormalUnit("gallon", "gal(lons?)?", VOLUME, 3.78541))  # gallon
 units.append(NormalUnit("fluid ounce", "fl\.?\s?oz\.?", VOLUME, 0.0295735296))  # fluid ounce
-units.append(NormalUnit("teaspoon", "tsp|teaspoons?", VOLUME, 0.00492892159))  # US teaspoon
-units.append(NormalUnit("tablespoon", "tbsp|tablespoons?", VOLUME, 0.0147867648))  # US tablespoon
+# units.append(NormalUnit("teaspoon", "tsp|teaspoons?", VOLUME, 0.00492892159))  # US teaspoon
+# units.append(NormalUnit("tablespoon", "tbsp|tablespoons?", VOLUME, 0.0147867648))  # US tablespoon
 units.append(NormalUnit("barrel", "drum|barrels?", VOLUME, 119.240471))  # barrel
 units.append(NormalUnit("peck", "pecks?", VOLUME, 8.809768))  # pecks
 units.append(NormalUnit("bushel", "bushels?", VOLUME, 35.23907016688))  # bushels
